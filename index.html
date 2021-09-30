@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-mb-7">
+                <h1 class="display-4">Formulario</h1>
+                <hr class="bg-info">
+                <p class="pb-0 mb-0">Te invitamos a contactarnos, te responderemos a la brevedad.</p>
+                <p class="text-danger small pt-0 mt-0">*Todos los campos son obligatorios</p>
+                <form class="ro g-3 needs-validation" name="formulario" id='formulario' onsubmit="return validacion()" novalidate >
+                    <div class="row form-group" >
+                        <label for="nombre" class="col-form-label col-md-2">Nombre Completo: </label>
+                        <div class="col-md-8 mb-3">
+                            <input type="text" name="nombre" value="" id="nombre" class="form-control" required>
+                            <div class="valid-feedback">¡Se ve bien!</div>
+                            <div class="invalid-feedback">Complete los datos</div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="rut" class="col-form-label col-md-2">Rut: </label>
+                        <div class="col-md-8 mb-3">
+                            <input type="text" name="rut" value="" id="rut" class="form-control" required>
+                            <div class="valid-feedback">Rut Válido</div>
+                            <div class="invalid-feedback">Complete los datos</div>
+                        </div>                       
+                    </div>
+                    <div class="row form-group">
+                        <label for="email" class="col-form-label col-md-2">Correo Electrónico: </label>
+                        <div class="col-md-8 mb-3">
+                            <input type="email" name="email" value="" id="email" class="form-control" required>
+                            <div class="valid-feedback">¡Se ve bien!</div>
+                            <div class="invalid-feedback">Complete los datos</div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="telefono" class="col-form-label col-md-2">Teléfono Móvil: </label>
+                        <div class="col-md-8 mb-3">
+                            <input type="number" name="telefono" value="" id="telefono" class="form-control" required>
+                            <div class="valid-feedback">¡Se ve bien!</div>
+                            <div class="invalid-feedback">Complete los datos</div>
+                        </div>
+                    </div>
+                    <!--Check-->
+                    <div class="row form-group">
+                        <label for="interes" class="col-form-label col-md-4">Seleccione uno o más lenguajes de programación de un interés: </label>
+                        <div class="mb-3" id="transportes" >
+                            
+                            <!--Campos-->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="python" id="python">
+                                <label class="form-check-label" for="python">
+                                  Python
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="typescript" id="typescript" >
+                                <label class="form-check-label" for="typescript">
+                                    Typescript
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="c++" id="c++">
+                                <label class="form-check-label" for="c++">
+                                  C++
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="c#" id="c#">
+                                <label class="form-check-label" for="c#">
+                                  C#
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="php" id="php">
+                                <label class="form-check-label" for="php">
+                                  PHP
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ruby" id="ruby">
+                                <label class="form-check-label" for="ruby">
+                                  Ruby on Rails
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="java" id="java">
+                                <label class="form-check-label" for="java">
+                                  Java
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="r" id="r">
+                                <label class="form-check-label" for="r">
+                                  R
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="groovy" id="groovy">
+                                <label class="form-check-label" for="groovy">
+                                  Groovy
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="go" id="go">
+                                <label class="form-check-label" for="go">
+                                  Go
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="swift" id="swift">
+                                <label class="form-check-label" for="swift">
+                                  Swift
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="kotlin" id="kotlin">
+                                <label class="form-check-label" for="kotlin">
+                                  Kotlin
+                                </label>
+                            </div>                            
+                        </div>
+                    </div>
+                    <!--Radio-->
+                    <div class="row form-group" name="radios">
+                        <label for="nivel" class="col-form-label col-md-4">Cuál es su nivel de experiencia en programación? </label>
+                        <div class="mb-3" name="opciones" id="opciones">
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Alto
+                                </label>                              
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  Medio
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault3">
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                  Bajo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Range-->   
+                    <div class="row form-group">
+                        <label for="conocimiento" class="col-form-label col-md-4">Nivel de conocimiento sobre los siguientes lenguajes de programación </label>
+                        <div class="mb-3">
+                            <label for="python" class="form-label">Python</label>
+                            <input type="range" class="form-range" id="python">
+                            <label for="python" class="form-label">Java</label>
+                            <input type="range" class="form-range" id="java">
+                            <label for="python" class="form-label">C++</label>
+                            <input type="range" class="form-range" id="c++">
+                        </div>                         
+                    </div>
+                    <!--Check con other-->
+                    <div class="row form-group">
+                        <label for="interes" class="col-form-label col-md-4">¿Cual de estos cursos le ha tomado mayor dificultad?: </label>
+                        <div class="mb-3">
+                            <!--Campos-->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="estructura-de-datos" id="estructura-de-datos">
+                                <label class="form-check-label" for="estructura-de-datos">
+                                    Estructura de Datos
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="inteligencia-artificial" id="inteligencia-artificial">
+                                <label class="form-check-label" for="inteligencia-artificial">
+                                    Inteligencia Artificial
+                                </label>
+                            </div>                  
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="humano-computador" id="humano-computador">
+                                <label class="form-check-label" for="humano-computador">
+                                    Interacción Humano-Computador
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="sistemas-operativos" id="sistemas-operativos">
+                                <label class="form-check-label" for="sistemas-operativos">
+                                    Sistemas Operativos
+                                </label>
+                            </div>     
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="otro" id="otro">
+                                <label class="form-check-label" for="otro">                                    
+                                    <input id="Otro-texto" name="Otro-texto" type="text" value="" placeholder="Otro" class="form-control" size="1000%"> 
+                                </label>                             
+                            </div>  
+                        </div>
+                    </div>  
+                    <!--texto-->
+                    <div class="row form-group">
+                        <label for="interes" class="col-form-label col-md-4">Queremos conocer su opinión acerca de la escuela  </label>
+                        <div class="mb-3">                          
+                            <textarea class="form-control" id="caja-de-texto" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit"  class="btn btn-primary btn-sm">Enviar</button>
+                    <button type="reset" class="btn btn-secondary btn-sm">Cancelar</button>
+
+
+                    
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+               
+       // Example starter JavaScript for disabling form submissions if there are invalid fields
+       (function () {
+            'use strict'
+          
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+          
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+              .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                  }
+          
+                  form.classList.add('was-validated')
+                }, false)
+              })
+          })()
+    </script>
+
+<script src="ts/inicio.js" async></script>
+</body>
+</html>
+    
+</body>
+</html>
